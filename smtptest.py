@@ -1,6 +1,6 @@
 #!/usr/bin/python
 """smtptest.py: command-line smtp test mail sender
-https://github.com/turbodog/python-smtp-mail-sending-tester
+https://github.com/Lihao2017-11-15/python-smtp-mail-sending-tester
 
 Usage: python smtptest.py [options] fromaddress toaddress serveraddress 
 
@@ -15,7 +15,7 @@ See also http://docs.python.org/library/smtplib.html
 """
 
 __version__ = "1.0"
-__author__ = "Lindsey Smith (lindsey.smith@gmail.com)"
+__author__ = "Lindsey Smith (lindsey.smith@gmail.com), Richard(812256@qq.com)"
 __copyright__ = "(C) 2010 Lindsey Smith. GNU GPL 2 or 3."
 
 import smtplib
@@ -76,7 +76,7 @@ if options.verbose:
 
 server = None
 if options.usessl:
-	server = smtplib.SMTP_SSL()
+	server = smtplib.SMTP_SSL(serveraddr)
 else:
 	server = smtplib.SMTP()
 
